@@ -23,12 +23,11 @@ const RecipeDetail = () => {
 
   return (
     <div className='recipe-detail'>
-      <h1>{recipe.title}</h1>
-      <img src={recipe.image} alt={recipe.title} className='recipe-image' />
-      <p className='recipe-text'>{recipe.instructions}</p>
-      {}
-    </div>
-  );
+    <h1>{recipe.title}</h1>
+    <img src={recipe.image} alt={recipe.title} className='recipe-image' />
+    <div className='recipe-text' dangerouslySetInnerHTML={{ __html: recipe.instructions }} />
+  </div>
+);
 };
 
 export default RecipeDetail;
